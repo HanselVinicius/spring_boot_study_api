@@ -1,0 +1,1 @@
+ALTER TABLE peoples_tb add  telefone varchar(20) not null;
