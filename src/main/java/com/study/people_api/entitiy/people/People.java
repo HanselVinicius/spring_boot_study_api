@@ -35,4 +35,22 @@ public class People {
         this.telefone = data.telefone();
         this.cpf = data.cpf();
     }
+
+    public void updateInfo(PeopleUpdateDTO data) {
+        if (data.nome() != null){
+            this.nome = data.nome();
+        }
+
+        if(data.telefone() != null){
+            this.telefone = data.telefone();
+        }
+        if(data.endereco() != null){
+            this.endereco.atualizarInformacoes(data.endereco());
+        }
+    }
+
+
+    public void excluir() {
+        this.ativo = false;
+    }
 }

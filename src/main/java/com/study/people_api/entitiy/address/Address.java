@@ -28,4 +28,22 @@ public class Address {
         this.cep = data.cep();
         this.uf = data.uf();
     }
+
+    public void atualizarInformacoes(AddressDTO dados) {
+        if(dados.rua() != null){
+            this.rua = dados.rua();
+        }if(dados.bairro() != null){
+            this.bairro = dados.bairro();
+        }if(dados.cep() != null){
+            this.cep = dados.cep();
+        }if(dados.uf() != null){
+            this.uf = dados.uf();
+        }if(dados.cidade() != null){
+            this.cidade = dados.cidade();
+        }if(dados.numero() != null){
+            this.numero = dados.numero();
+        }if(dados.complemento() != null){
+            this.complemento = dados.complemento();
+        }
+    }
 }
