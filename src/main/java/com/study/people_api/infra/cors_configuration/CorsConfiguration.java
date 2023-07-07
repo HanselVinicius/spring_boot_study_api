@@ -1,4 +1,4 @@
-package com.study.people_api.configuration;
+package com.study.people_api.infra.cors_configuration;
 
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
