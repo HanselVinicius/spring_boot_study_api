@@ -1,4 +1,4 @@
-package com.study.people_api.entitiy.users.security;
+package com.study.people_api.infra.security;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;

@@ -1,4 +1,4 @@
-package com.study.people_api.entitiy.users.security;
+package com.study.people_api.infra.security;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +28,8 @@ public class SecurityConfigurations {
         return http.csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(req -> {
-                                             req.requestMatchers(HttpMethod.POST, "/v1/login").permitAll();
+                                             req.requestMatchers(HttpMethod.POST, "/v1/auth/login").permitAll();
+                                             req.requestMatchers(HttpMethod.POST, "/v1/auth/register").permitAll();
                                              req.anyRequest().authenticated();
                                              }
                 ).addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)

@@ -1,4 +1,4 @@
-package com.study.people_api.entitiy.users.security;
+package com.study.people_api.infra.security;
 
 import com.study.people_api.entitiy.users.UserRepository;
 import jakarta.servlet.FilterChain;
@@ -32,6 +32,7 @@ public class SecurityFilter extends OncePerRequestFilter {
             var authentication = new UsernamePasswordAuthenticationToken(user,null,user.getAuthorities());
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }
+
         filterChain.doFilter(request,response);
     }
 

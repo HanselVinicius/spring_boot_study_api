@@ -21,9 +21,13 @@ import java.util.List;
 public class Usuario  implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private long id;
+        private Long id;
         private String login;
         private String senha;
+
+    public Usuario(String login,String senha){
+        this(null,login,senha);
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
