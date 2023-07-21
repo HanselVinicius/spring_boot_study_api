@@ -41,6 +41,12 @@ public class PeopleController {
         return  ResponseEntity.ok(new DetailPersonDTO(person));
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity getOne(@PathVariable Long id){
+        var person = repository.getReferenceById(id);
+        return ResponseEntity.ok(new DetailPersonDTO(person));
+    }
+
     @DeleteMapping("/{id}")
     @Transactional
     public ResponseEntity delete(@PathVariable Long id){
