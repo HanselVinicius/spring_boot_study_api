@@ -1,8 +1,7 @@
 package com.study.people_api.entitiy.people;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.study.people_api.entitiy.address.AddressDTO;
-import com.study.people_api.infra.deserialization.CustomDateDeserializer;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -13,7 +12,7 @@ public record PeopleRegisterDTO(
     @NotBlank
      String nome,
 
-     @JsonDeserialize(using = CustomDateDeserializer.class)
+     @JsonFormat(pattern = "MMM dd, yyyy hh:mm:ss a",locale = "en")
      Date dataDeAniversario,
     @NotNull
     @Valid
