@@ -4,7 +4,7 @@ import com.study.people_api.entitiy.address.Address;
 
 import java.util.Date;
 
-public record PeopleListDTO(Long id, String nome, String cpf, Date data_de_aniversario, Address address,String telefone) {
+public record PeopleListDTO(Long id, String nome, String cpf, Date dataDeAniversario, Address endereco, String telefone) {
 
 
     public PeopleListDTO(People people){
